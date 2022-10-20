@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>單擊迴圈切換圖片</title>
+<script>
+var i = 1;
+function nextImg()
+    {
+        i++;
+//步驟2：獲取頁面元素
+var next = document.getElementById("nImg");
+//步驟3：更改元素的src屬性
+next.src = "img/"+i+".jpg";
+if(i==3)
+    {
+    i=0;
+    } 
+    }
+</script>
+</head>
+<body>
+<div>
+<!--步驟1：繫結onclick事件-->
+<button onclick="nextImg()">下一張</button>
+<br />
+<!--需自己準備3張圖片-->
+<img src="/001.jpg" id="nImg" width="600px" height="400px" />
+
+</div>
+</body>
+</html>         
